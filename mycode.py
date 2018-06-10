@@ -22,8 +22,9 @@ def holidaylist():
     today1=datetime.date.today()
     for each in holiday:
         for(key,value) in each.items():
-            if (key==today1):
-                return value()
+            if (value==today1):
+                for _ in value:
+                 print(_)
             
 
 print(holidaylist())
